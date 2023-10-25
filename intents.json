@@ -1,0 +1,200 @@
+{"intents": [
+  {"tag": "Welcoming",
+  "patterns": [   "Hi",
+                  "Hi there!",
+                  "Greetings!",
+                  "Hey!",
+                  "Howdy!",
+                  "Hi, how are you?",
+                  "Good day!",
+                  "Hello there!",
+                  "Hi, it's nice to meet you.",
+                  "Hey, what's up?",
+                  "Well, hello!"],
+  "responses": [
+    "Hey :-)",
+    "Hi there, what can I do for you?",
+    "Hi there, how can I help?"
+   ]
+},
+
+{
+  "tag": "goodbye",
+  "patterns": ["Bye", "See you later", "Goodbye","Farewell!"
+                ],
+  "responses": [
+    "See you later, thanks for visiting",
+    "Have a nice day",
+    "Bye! Come back again soon."
+  ]
+},
+
+{
+  "tag": "thanks",
+  "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+  "responses": ["Happy to help!", "Any time!", "My pleasure"]
+},
+
+{
+  "tag": "items",
+  "patterns": [
+    "Which items do you have?",
+    "What kinds of items are there?",
+    "What do you sell?",
+    "What do you offer?",
+    "What's on your list?",
+    "Tell me about your product range.",
+    "Which products are in stock?",
+    "I'd like to know what you have."
+  ],
+  "responses": [
+    "We offer a selection of bakery products.",
+    "Our specialty is baked goods.",
+    "You'll find a variety of baked treats at our store.",
+    "We have a range of bakery items for sale.",
+    "Bakery delights are our specialty."
+    
+  ]
+},
+
+{
+  "tag": "payments",
+  "patterns": [
+    "Do you take credit cards?",
+    "Do you accept Mastercard?",
+    "Can I pay with Paypal?",
+    "Are you cash only?"
+  ],
+  "responses": [
+    "We accept VISA, Mastercard and Paypal",
+    "We accept most major credit cards, and Paypal"
+  ]
+},
+
+
+{
+  "tag": "delivery",
+  "patterns": [
+    "How long does delivery take?",
+    "How long does shipping take?",
+    "When do I get my delivery?"
+  ],
+  "responses": [
+    "Delivery takes 2-4 days",
+    "Shipping takes 2-4 days"
+  ]
+},
+
+
+{
+  "tag": "product_info",
+  "patterns": ["Tell me about", "Tell me about Food the ", "Foods",""],
+  "responses": ["Sure"],
+  "context_set": "product_info"
+},
+
+{"tag": "track.order",
+"patterns": ["check the status of my order","track order","track existing order","my order ID is","I want to track my order "],
+"responses": ["get order by ID"]
+},
+
+
+{
+  "tag": "product.recommendation",
+  "patterns": ["Recomend",
+    "Recommend a popular dish.",
+    "What's the chef's special?",
+    "Suggest something delicious.",
+    "I'm looking for a unique dish.",
+    "Give me a recommendation."
+  ],
+  "responses": [
+    "- Spaghetti Carbonara",
+    "- BBQ Ribs",
+    "- Green Tea Sushi Roll",
+    "- Chocolate Fondue"
+  ]
+},
+  
+
+{
+  "tag": "Openening_hours",
+  "patterns": [
+    "What are your opening hours?","What time shop open","when open",
+    "What are your hours of operation?",
+    "When do you open and close?",
+    "When can I visit?",
+    "What time do you start and end business?",
+    "What's your schedule like?",
+    "When are you available?",
+    "Tell me your open hours.",
+    "What time can I come by?",
+    "When are you in service?"
+  ],
+  "responses": [
+    "We operate from 10:00 AM to 9:00 PM.",
+    "Our hours are 10:00 AM to 9:00 PM.",
+    "You can visit us between 10:00 AM and 9:00 PM.",
+    "We're open from 10:00 in the morning to 9:00 at night.",
+    "Our business is available from 10:00 AM until 9:00 PM.",
+    "You can drop by any time between 10:00 AM and 9:00 PM.",
+    "We're here to serve you from 10:00 AM to 9:00 PM."
+  ]
+    
+},
+
+
+{
+  "tag": "Phone_number",
+  "patterns": [
+    "Can you share your contact number?",
+    "I'd like to get your phone number.",
+    "Please provide your contact details, including the phone number.",
+    "What's the best way to reach you by phone?",
+    "I need your phone contact for communication.",
+    "Could you give me your phone number?",
+    "I'm looking for your contact phone number.",
+    "How can I contact you by phone?"
+  ],
+  "responses": [
+    "yes our phone number is 077-xxx-xxxx"
+  ]
+    
+},
+
+
+{
+  "tag": "menu_image",
+  "patterns": [
+    "I'd like to see the menu, please.",
+    "Could you display the food options?",
+    "Show me what's on the menu.",
+    "May I view the list of dishes?",
+    "What do you have on the menu?",
+    "I'm interested in your food offerings."
+  ],
+  "responses": [
+    "this is the menu"
+  ]
+    
+},
+
+{
+  "tag": "Vegi",
+  "patterns": [
+    "Are there any vegetarian options?",
+    "Do you have any dishes suitable for vegetarians?",
+    "Are there menu items for those who prefer a vegetarian diet?",
+    "Can I find vegetarian choices on the menu?",
+    "Are there any meatless options available?",
+    "I'm looking for dishes that don't contain meat. Are there any?"
+  ],
+  "responses": [
+    "this is the menu"
+  ]
+    
+}
+
+
+
+]}
