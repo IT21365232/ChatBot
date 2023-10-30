@@ -1,0 +1,67 @@
+CREATE DATABASE irwa;
+use irwa;
+
+CREATE TABLE menuItems (
+    ItemNo INT AUTO_INCREMENT,
+    ItemName VARCHAR(255) NOT NULL,
+    Description VARCHAR(1000),
+    Category VARCHAR(50),
+    Price DECIMAL(10, 2),
+    Ingredients TEXT,
+    SpecialFeatures VARCHAR(255),
+    Availability BOOLEAN,
+    Rating DECIMAL(3, 1),
+    PreparationTime INT,
+    SpecialNotes TEXT,
+    
+    PRIMARY KEY (ItemNo)
+);
+
+-- Inserting records into the MenuItems table
+INSERT INTO MenuItems (ItemName, Description, Category, Price, Ingredients, SpecialFeatures, Availability, Rating, PreparationTime, SpecialNotes)
+VALUES
+    ('Spaghetti Carbonara', 'Delicious pasta with bacon and eggs', 'Pasta', 12.99, 'Spaghetti, bacon, eggs, cheese', 'Gluten-free', 1, 4.7, 20, 'Served with a side salad'),
+    ('Chicken Alfredo', 'Creamy chicken pasta', 'Pasta', 14.99, 'Chicken, fettuccine, cream sauce', 'None', 1, 4.8, 25, 'Extra parmesan on request'),
+    ('Margherita Pizza', 'Classic tomato and mozzarella pizza', 'Pizza', 11.99, 'Dough, tomato sauce, mozzarella, basil', 'Vegetarian', 1, 4.5, 18, 'Thin crust'),
+    ('BBQ Ribs', 'Succulent barbecue ribs', 'Meat', 16.99, 'Pork ribs, BBQ sauce', 'None', 1, 4.6, 30, 'Comes with coleslaw and fries'),
+    ('Caesar Salad', 'Fresh romaine lettuce with Caesar dressing', 'Salad', 8.99, 'Lettuce, croutons, Caesar dressing', 'Vegetarian', 1, 4.4, 10, 'Add grilled chicken for $3'),
+    ('Chocolate Fondue', 'Rich chocolate fondue with fruits', 'Dessert', 9.99, 'Chocolate, strawberries, bananas', 'Vegetarian', 1, 4.9, 15, 'Great for sharing'),
+    ('Green Tea Sushi Roll', 'Sushi with avocado and cucumber', 'Sushi', 10.99, 'Rice, avocado, cucumber, seaweed', 'Vegan', 1, 4.2, 12, 'Soy sauce on the side'),
+    ('Lemonade', 'Refreshing homemade lemonade', 'Beverage', 2.99, 'Lemons, sugar, water', 'Vegan', 1, 4.9, 5, 'Add mint leaves for extra flavor'),
+    ('Spicy Tofu Stir-Fry', 'Spicy tofu with vegetables', 'Vegetarian', 13.99, 'Tofu, mixed vegetables, spicy sauce', 'Vegan', 1, 4.3, 22, 'Can be made extra spicy on request'),
+    ('Mango Sorbet', 'Tropical mango sorbet', 'Dessert', 6.99, 'Mango puree, sugar', 'Vegan', 1, 4.7, 8, 'No dairy or artificial additives');
+
+
+CREATE TABLE orders (
+    OrderID INT AUTO_INCREMENT,  -- Unique order identifier
+    CustomerName VARCHAR(255) NOT NULL, -- Name of the customer placing the order
+    orders VARCHAR(255)NOT NULL, -- order items
+    OrderDate DATE, -- Date when the order was placed
+    TotalAmount DECIMAL(10, 2), -- Total cost of the order
+    Status VARCHAR(50), -- Status of the order (e.g., "Pending," "Shipped," "Delivered")
+    
+    PRIMARY KEY (OrderID)
+);
+
+INSERT INTO orders (CustomerName, orders, OrderDate, TotalAmount, Status)
+VALUES
+    ('John Doe', 'Pizza, Pasta, Salad', '2023-10-24', 38.50, 'Shipped'),
+    ('Jane Smith', 'Burger, Fries, Soda', '2023-10-23', 12.99, 'Delivered'),
+    ('Alice Johnson', 'Sushi, Miso Soup', '2023-10-22', 27.75, 'Shipped'),
+    ('Bob Brown', 'Steak, Baked Potato', '2023-10-21', 42.99, 'Delivered'),
+    ('Eva Davis', 'Taco, Guacamole', '2023-10-20', 15.25, 'Pending'),
+    ('Michael Wilson', 'Burrito, Rice, Beans', '2023-10-19', 18.75, 'Delivered'),
+    ('Sophia Lee', 'Chicken Curry, Naan', '2023-10-18', 22.50, 'Shipped'),
+    ('William Clark', 'Fish and Chips', '2023-10-17', 11.99, 'Delivered'),
+    ('Olivia Martinez', 'Hamburger, Onion Rings', '2023-10-16', 14.75, 'Shipped'),
+    ('Daniel Rodriguez', 'Sushi, Miso Soup', '2023-10-15', 27.75, 'Pending');
+
+select *
+from orders;
+
+select *
+from menuItems;
+
+-- SHOW GRANTS FOR 'root'@'localhost';
+
+-- ALTER USER 'root'@'localhost' IDENTIFIED BY 'Dsd07655';
